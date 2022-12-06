@@ -17,7 +17,7 @@ import Profile from './pages/Profile/Profile';
 
 const App = () => {
 	// we are not logged in yet
-	const currentUser = false;
+	const currentUser = true;
 	const ProtectedRoute = ({ children }) => {
 		// if there is no current user
 		if (!currentUser) {
