@@ -9,35 +9,53 @@
 	.left {
 		display: flex;
 		align-items: center;
-		gap: 20px;
+		gap: 30px;
 
-		span {
+		.connect {
+			font-weight: bold;
+			font-size: 20px;
+			color: goldenrod;
+		}
+		.social {
+			font-weight: bold;
+			font-size: 20px;
+			color: #ccc;
 		}
 
 		.search {
 			display: flex;
 			align-items: center;
+			gap: 10px;
+			border: 1px solid lightgray;
+			border-radius: 5px;
+			padding: 5px;
+
 			input {
-				width: 300px;
+				width: 500px;
+				border: none;
+				padding: 5px;
+				border-radius: 5px;
 			}
 		}
 	}
 	.right {
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 30px;
 
 		.user {
 			display: flex;
 			align-items: center;
-			gap: 10px;
+			gap: 30px;
 
 			span {
 			}
 
 			img {
 				width: 30px;
+				height: 30px;
 				border-radius: 50%;
+				object-fit: cover;
 			}
 		}
 	}

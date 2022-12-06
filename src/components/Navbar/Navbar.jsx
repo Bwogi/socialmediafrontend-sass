@@ -14,7 +14,10 @@ const Navbar = () => {
 		<div className='navbar'>
 			<div className='left'>
 				<Link to='/' style={{ textDecoration: 'none' }}>
-					<span>Connect Social</span>
+					<div>
+						<span className='connect'>Conn3ct</span>
+						<span className='social'>-Social</span>
+					</div>
 				</Link>
 				<HomeOutlinedIcon />
 				<DarkModeOutlinedIcon />
