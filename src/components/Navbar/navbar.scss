@@ -14,12 +14,19 @@
 		.connect {
 			font-weight: bold;
 			font-size: 20px;
-			color: goldenrod;
+			color: lightcoral;
 		}
 		.social {
 			font-weight: bold;
 			font-size: 20px;
 			color: #ccc;
+		}
+		.icon {
+			font-size: 20px;
+			padding: 10px 0;
+			margin-right: 10px;
+			color: blue;
+			cursor: pointer;
 		}
 
 		.search {

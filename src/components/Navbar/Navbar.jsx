@@ -1,6 +1,8 @@
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+// import HomeOutlinedIcon from '@ mui/icons-material/HomeOutlined';
+import { FcHome } from 'react-icons/fc';
+import { FcOrgUnit } from 'react-icons/fc';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
+// import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
@@ -19,9 +21,9 @@ const Navbar = () => {
 						<span className='social'>-Social</span>
 					</div>
 				</Link>
-				<HomeOutlinedIcon />
+				<FcHome className='icon' />
 				<DarkModeOutlinedIcon />
-				<GridViewOutlinedIcon />
+				<FcOrgUnit className='icon' />
 				<div className='search'>
 					<SearchOutlinedIcon />
 					<input type='text' placeholder='Search...' />
