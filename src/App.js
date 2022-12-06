@@ -4,6 +4,7 @@ import {
 	RouterProvider,
 	Route,
 	Outlet,
+	Navigate,
 } from 'react-router-dom';
 import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
@@ -15,6 +16,16 @@ import Rightbar from './components/Rightbar/Rightbar';
 import Profile from './pages/Profile/Profile';
 
 const App = () => {
+	// we are not logged in yet
+	const currentUser = false;
+	const ProtectedRoute = ({ children }) => {
+		// if there is no current user
+		if (!currentUser) {
+			return <Navigate to='/login' />;
+		}
+		return children;
+	};
+
 	const Layout = () => {
 		return (
 			<div>
@@ -30,7 +41,11 @@ const App = () => {
 	const router = createBrowserRouter([
 		{
 			path: '/',
-			element: <Layout />,
+			element: (
+				<ProtectedRoute>
+					<Layout />
+				</ProtectedRoute>
+			),
 			errorElement: <ErrorPage />,
 			children: [
 				{
