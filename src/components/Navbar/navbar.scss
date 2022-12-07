@@ -5,11 +5,15 @@
 	padding: 10px 20px;
 	height: 50px;
 	border-bottom: 1px solid lightgray;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
 
 	.left {
 		display: flex;
 		align-items: center;
 		gap: 30px;
+		position: sticky;
 
 		.connect {
 			font-weight: bold;
@@ -49,6 +53,14 @@
 		display: flex;
 		align-items: center;
 		gap: 30px;
+
+		.icon {
+			font-size: 20px;
+			padding: 10px 0;
+			margin-right: 10px;
+			color: blue;
+			cursor: pointer;
+		}
 
 		.user {
 			display: flex;

@@ -4,6 +4,10 @@
 	flex-direction: column;
 	border: 1px solid #eee;
 	padding: 20px;
+	position: sticky;
+	// height of navbar is 70px
+	top: 70px;
+	height: calc(100vh - 70px);
 	.container {
 		display: flex;
 		flex-direction: column;
