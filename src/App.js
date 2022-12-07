@@ -13,6 +13,7 @@ import Navbar from './components/Navbar/Navbar';
 import Leftbar from './components/Leftbar/Leftbar';
 import Rightbar from './components/Rightbar/Rightbar';
 import Profile from './pages/Profile/Profile';
+import './style.scss';
 
 const App = () => {
 	// we are not logged in yet
@@ -27,7 +28,7 @@ const App = () => {
 
 	const Layout = () => {
 		return (
-			<div>
+			<div className='theme-dark'>
 				<Navbar />
 				<div style={{ display: 'flex' }}>
 					<Leftbar />

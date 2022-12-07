@@ -1,78 +1,85 @@
+@import '../../style.scss';
+
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-	height: 50px;
-	border-bottom: 1px solid lightgray;
-	position: -webkit-sticky;
-	position: sticky;
-
-	top: 0;
-	background-color: #fff;
-
-	.left {
+	@include themify($themes) {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		gap: 30px;
+		padding: 10px 20px;
+		height: 50px;
+		border-bottom: 1px solid lightgray;
+		position: -webkit-sticky;
+		position: sticky;
 
-		.connect {
-			font-weight: bold;
-			font-size: 20px;
-			color: lightcoral;
-		}
-		.social {
-			font-weight: bold;
-			font-size: 20px;
-			color: #ccc;
-		}
-		.icon {
-			font-size: 20px;
-			padding: 10px 0;
-			margin-right: 10px;
-			color: blue;
-			cursor: pointer;
-		}
+		top: 0;
+		background-color: themed('bg');
+		color: themed('textColor');
 
-		.search {
-			display: flex;
-			align-items: center;
-			gap: 10px;
-			border: 1px solid lightgray;
-			border-radius: 5px;
-			padding: 5px;
-
-			input {
-				width: 500px;
-				border: none;
-				padding: 5px;
-				border-radius: 5px;
-			}
-		}
-	}
-	.right {
-		display: flex;
-		align-items: center;
-		gap: 30px;
-
-		.icon {
-			font-size: 20px;
-			padding: 10px 0;
-			margin-right: 10px;
-			color: blue;
-			cursor: pointer;
-		}
-
-		.user {
+		.left {
 			display: flex;
 			align-items: center;
 			gap: 30px;
 
-			img {
-				width: 30px;
-				height: 30px;
-				border-radius: 50%;
-				object-fit: cover;
+			.connect {
+				font-weight: bold;
+				font-size: 20px;
+				color: lightcoral;
+			}
+			.social {
+				font-weight: bold;
+				font-size: 20px;
+				color: #ccc;
+			}
+			.icon {
+				font-size: 20px;
+				padding: 10px 0;
+				margin-right: 10px;
+				color: themed('logo');
+				cursor: pointer;
+			}
+
+			.search {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				border: 1px solid themed('border');
+				border-radius: 5px;
+				padding: 5px;
+
+				input {
+					width: 500px;
+					border: none;
+					padding: 5px;
+					border-radius: 5px;
+					background-color: transparent;
+					color: themed('textColor');
+				}
+			}
+		}
+		.right {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+
+			.icon {
+				font-size: 20px;
+				padding: 10px 0;
+				margin-right: 10px;
+				color: blue;
+				cursor: pointer;
+			}
+
+			.user {
+				display: flex;
+				align-items: center;
+				gap: 30px;
+
+				img {
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					object-fit: cover;
+				}
 			}
 		}
 	}
