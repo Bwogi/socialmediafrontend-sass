@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DarkModeContext } from './context/darkModeContext';
+
 import {
 	createBrowserRouter,
 	RouterProvider,
@@ -18,6 +20,10 @@ import './style.scss';
 const App = () => {
 	// we are not logged in yet
 	const currentUser = true;
+	//dark mode
+	const { darkMode } = useContext(DarkModeContext);
+	// console.log(darkMode);
+
 	const ProtectedRoute = ({ children }) => {
 		// if there is no current user
 		if (!currentUser) {
@@ -28,7 +34,7 @@ const App = () => {
 
 	const Layout = () => {
 		return (
-			<div className='theme-dark'>
+			<div className={`theme-${darkMode ? 'dark' : 'light'}`}>
 				<Navbar />
 				<div style={{ display: 'flex' }}>
 					<Leftbar />

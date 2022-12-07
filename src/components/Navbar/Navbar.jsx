@@ -1,7 +1,10 @@
+import { useContext } from 'react';
+import { DarkModeContext } from '../../context/darkModeContext';
 // import HomeOutlinedIcon from '@ mui/icons-material/HomeOutlined';
+import BrightnessMediumOutlinedIcon from '@mui/icons-material/BrightnessMediumOutlined';
 import { FcHome } from 'react-icons/fc';
 import { FcOrgUnit } from 'react-icons/fc';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+// import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 // import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
@@ -12,6 +15,8 @@ import { Link } from 'react-router-dom';
 import './navbar.scss';
 
 const Navbar = () => {
+	const { toggle } = useContext(DarkModeContext);
+
 	return (
 		<div className='navbar'>
 			<div className='left'>
@@ -22,7 +27,7 @@ const Navbar = () => {
 					</div>
 				</Link>
 				<FcHome className='icon' />
-				<DarkModeOutlinedIcon />
+				<BrightnessMediumOutlinedIcon onClick={toggle} className='icon' />
 				<FcOrgUnit className='icon' />
 				<div className='search'>
 					<SearchOutlinedIcon />
