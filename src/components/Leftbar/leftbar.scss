@@ -1,66 +1,70 @@
+@import '../../style.scss';
+
 .leftbar {
-	flex: 2;
-	display: flex;
-	// flex-direction: column;
-	// border: 1px solid #eee;
-	position: -webkit-sticky;
-	position: sticky;
-	// height of navbar is 70px
-	top: 70px;
-	height: calc(100vh - 70px);
-	overflow: scroll;
-
-	&::-webkit-scrollbar {
-		display: none;
-	}
-	.container {
+	@include themify($themes) {
+		flex: 2;
 		display: flex;
-		flex-direction: column;
-		padding: 5px 20px;
+		position: -webkit-sticky;
+		position: sticky;
+		// height of navbar is 70px
+		top: 70px;
+		height: calc(100vh - 70px);
+		overflow: scroll;
+		background-color: themed('bg');
+		color: themed('textColor');
 
-		.menu {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.container {
 			display: flex;
 			flex-direction: column;
 			padding: 5px 20px;
 
-			span {
-				font-size: 12px;
-			}
-			.user {
+			.menu {
 				display: flex;
-				align-items: center;
-
-				img {
-					width: 30px;
-					height: 30px;
-					border-radius: 50%;
-					object-fit: cover;
-				}
-				span {
-					margin-left: 20px;
-				}
-			}
-			.item {
-				display: flex;
-				align-items: center;
-				.icon {
-					font-size: 20px;
-					padding: 10px 0;
-					margin-right: 10px;
-					color: blue;
-					cursor: pointer;
-				}
+				flex-direction: column;
+				padding: 5px 20px;
 
 				span {
 					font-size: 12px;
-					cursor: pointer;
+				}
+				.user {
+					display: flex;
+					align-items: center;
+
+					img {
+						width: 30px;
+						height: 30px;
+						border-radius: 50%;
+						object-fit: cover;
+					}
+					span {
+						margin-left: 20px;
+					}
+				}
+				.item {
+					display: flex;
+					align-items: center;
+					.icon {
+						font-size: 20px;
+						padding: 10px 0;
+						margin-right: 10px;
+						color: blue;
+						cursor: pointer;
+					}
+
+					span {
+						font-size: 12px;
+						cursor: pointer;
+					}
 				}
 			}
-		}
-		.hr {
-			border: none;
-			border-bottom: 1px solid #eee;
-			margin: 5px 0;
+			.hr {
+				border: none;
+				border-bottom: 1px solid themed('border');
+				margin: 5px 0;
+			}
 		}
 	}
 }
