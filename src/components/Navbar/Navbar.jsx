@@ -36,7 +36,7 @@ const Navbar = () => {
 				<div className='user'>
 					<span>John Doe</span>
 					<img
-						src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+						src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
 						alt=''
 					/>
 				</div>

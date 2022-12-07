@@ -5,7 +5,9 @@
 	padding: 10px 20px;
 	height: 50px;
 	border-bottom: 1px solid lightgray;
+	position: -webkit-sticky;
 	position: sticky;
+
 	top: 0;
 	background-color: #fff;
 
@@ -13,7 +15,6 @@
 		display: flex;
 		align-items: center;
 		gap: 30px;
-		position: sticky;
 
 		.connect {
 			font-weight: bold;
@@ -66,9 +67,6 @@
 			display: flex;
 			align-items: center;
 			gap: 30px;
-
-			span {
-			}
 
 			img {
 				width: 30px;
