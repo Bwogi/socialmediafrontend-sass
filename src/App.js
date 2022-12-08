@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { DarkModeContext } from './context/darkModeContext';
+import { AuthContext } from './context/authContext';
 
 import {
 	createBrowserRouter,
@@ -19,7 +20,7 @@ import './style.scss';
 
 const App = () => {
 	// we are not logged in yet
-	const currentUser = true;
+	const { currentUser } = useContext(AuthContext);
 	//dark mode
 	const { darkMode } = useContext(DarkModeContext);
 	// console.log(darkMode);

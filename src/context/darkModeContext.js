@@ -31,10 +31,8 @@ export const DarkModeContextProvider = ({ children }) => {
 		// then wrap the children with the DarkModeContextProvider in index.js to use both the darkMode and the toggle function in your entire application
 		// in app.js, import useContext from react and DarkModeContext from the context folder
 		// const {darkMode} = useContext(DarkModeContext); and console log darkMode to see the value of the darkMode variable
-
-		// to use this in any component, copy the const {darkMode} = useContext(DarkModeContext); and paste it into your component
-		// change darkMode to the toggle function since its the one we need for our onClick handler
-
+		// to use this in any component, copy the const const { toggle, darkMode } = useContext(DarkModeContext); and paste it into your component
 		// whether its a button or another component, its onClick handler = {toggle} function as in <button onClick={toggle}></button>
+		// application of darkMode and toggle function => {darkMode ? ( <DarkModeOutlinedIcon onClick={toggle} className='icon' /> ) : (<WbSunnyOutlinedIcon onClick={toggle} className='icon' />)}
 	);
 };
