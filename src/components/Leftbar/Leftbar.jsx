@@ -12,18 +12,18 @@ import { FcCdLogo } from 'react-icons/fc';
 import { FcMoneyTransfer } from 'react-icons/fc';
 import { FcTimeline } from 'react-icons/fc';
 import { FcApproval } from 'react-icons/fc';
+import { AuthContext } from '../../context/authContext';
+import { useContext } from 'react';
 const Leftbar = () => {
+	const { currentUser } = useContext(AuthContext);
 	return (
 		<div className='leftbar'>
 			<div className='container'>
 				<div className='menu'>
 					<div className='user'>
-						<img
-							src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-							alt=''
-						/>
+						<img src={currentUser.profilePic} alt='' />
 
-						<span>John Doe</span>
+						<span>{currentUser.name}</span>
 					</div>
 					<div className='item'>
 						<FcVoicePresentation className='icon' />
