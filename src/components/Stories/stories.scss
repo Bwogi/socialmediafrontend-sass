@@ -1,29 +1,38 @@
 .stories {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 5px;
-	overflow: hidden;
-
+	gap: 10px;
+	height: 200px;
+	margin-bottom: 30px;
+	position: relative;
 	.story {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border: 1px solid #ccc;
-		padding: 2px;
+		flex: 1;
 		border-radius: 10px;
-		width: 150px;
-		height: 250px;
-
+		overflow: hidden;
+		position: relative;
 		img {
-			width: 150px;
-			height: 250px;
-			border-radius: 10px;
+			width: 100%;
+			height: 100%;
 			object-fit: cover;
 		}
-		p {
-			font-size: 12px;
-			margin-top: 5px;
+		span {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			font-size: 10px;
+			color: white;
+			font-weight: 500;
+		}
+		button {
+			border-radius: 50%;
+			background-color: lightcoral;
+			color: white;
+			position: absolute;
+			bottom: 30px;
+			left: 10px;
+			cursor: pointer;
+			width: 30px;
+			height: 30px;
+			font-weight: bold;
 		}
 	}
 }
