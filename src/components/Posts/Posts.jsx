@@ -29,7 +29,6 @@ const Posts = () => {
 			{posts.map((post) => (
 				<Post key={post.id} post={post} className='post' />
 			))}
-			<p>buttons</p>
 		</div>
 	);
 };
